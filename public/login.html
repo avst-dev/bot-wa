@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background: linear-gradient(135deg, #f4f7fe 0%, #e9eefc 100%); min-height: 100vh; font-family: 'Segoe UI', sans-serif; }
+        .login-container { max-width: 400px; width: 90%; }
+        .card { 
+            border: none; 
+            border-radius: 24px; 
+            box-shadow: 0 20px 40px rgba(111, 66, 193, 0.1); 
+            overflow: hidden;
+        }
+        .btn-purple { 
+            background: #6f42c1; 
+            color: white; 
+            padding: 12px; 
+            border-radius: 12px; 
+            font-weight: 600; 
+            transition: 0.3s;
+        }
+        .btn-purple:hover { background: #59359a; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(111, 66, 193, 0.3); }
+        .form-control { border-radius: 12px; padding: 12px; border: 1px solid #e0e0e0; }
+        .form-control:focus { border-color: #6f42c1; box-shadow: 0 0 0 0.25rem rgba(111, 66, 193, 0.1); }
+    </style>
+</head>
+<body class="d-flex align-items-center justify-content-center">
+    <div class="login-container">
+        <div class="card p-4 p-md-5 bg-white">
+            <div class="text-center mb-4">
+                <div class="mb-3 d-inline-block p-3 rounded-circle bg-light">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#6f42c1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <h3 class="fw-bold text-dark">BOT <span style="color: #6f42c1;">Panel</span></h3>
+                <p class="text-muted small">Silahkan masuk sebagai Admin</p>
+            </div>
+            <form action="/login" method="POST">
+                <div class="mb-4">
+                    <input type="password" name="password" class="form-control" placeholder="******" required>
+                </div>
+                <button type="submit" class="btn btn-purple w-100">Masuk Dashboard</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
